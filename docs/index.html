@@ -163,6 +163,38 @@
     body.dark-theme footer {
         background: #1f1f1f;
     }
+
+    .dev-attribution {
+        margin-bottom: 10px;
+    }
+    .dev-attribution p {
+        margin: 0 0 0.25rem 0;
+        font-size: 0.9em;
+    }
+    .dev-attribution p:last-child {
+        font-size: 0.7rem;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .footer-links a {
+        text-decoration: none;
+        color: #2575fc;
+        font-size: 0.8em;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    .footer-links a:hover {
+        color: #6a11cb;
+    }
+    body.dark-theme .footer-links a {
+        color: #a3bffa;
+    }
+
     .video-section {
   display: flex;
   justify-content: center; /* centers them horizontally */
@@ -265,9 +297,9 @@
     </div>
 </section>
     <footer>
-<div class="dev-attribution">
-        <p style="margin: 0 0 0.25rem 0;">Developed by 103 Software Solution LLC</p>
-        <p style="margin: 0; font-size: 0.7rem;">
+      <div class="dev-attribution">
+        <p>Developed by 103 Software Solution LLC</p>
+        <p class="dev-copyright">
           &copy; 2025 103 Software Solution LLC. All rights reserved.
         </p>
       </div>
@@ -276,14 +308,12 @@
         <a href="https://103-software-solutions-llc.vercel.app/">Terms of Service</a>
         <a href="https://103-software-solutions-llc.vercel.app/contact.html">Contact</a>
       </nav>
-    </div>
   </footer>
 <script>
-    // Dynamic year update for both copyrights (optional, runs on load)
+    // Dynamic year update for dev copyright (runs on load)
     document.addEventListener('DOMContentLoaded', () => {
       const year = new Date().getFullYear();
-      document.querySelector('.client-copyright').innerHTML = `&copy; ${year} Wh2oly Holistic Hydration. All Rights Reserved.`;
-      document.querySelector('.dev-attribution p:last-child').innerHTML = `&copy; ${year} 103 Software Solution LLC. All rights reserved.`;
+      document.querySelector('.dev-copyright').innerHTML = `&copy; ${year} 103 Software Solution LLC. All rights reserved.`;
     });
   </script>
 <script>
